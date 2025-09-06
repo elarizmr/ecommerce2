@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>login</title>
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <script>
+    
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff1f1',
+              100: '#ffe0e0',
+              500: '#e11d2e', 
+              600: '#c8102e'
+            }
+          },
+          boxShadow: {
+            soft: '0 25px 60px -15px rgba(0,0,0,.15)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-dvh bg-white text-gray-900 antialiased">
+
+  <header class="w-full sticky top-0 z-30 bg-white/70 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
+      <a href="#" class="inline-flex items-center gap-2">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white shadow px-3 py-1">
+          <span class="h-6 w-6 rounded-full bg-brand-600 inline-block"></span>
+          <span class="font-semibold">Baku <span class="text-gray-500">Electronics</span></span>
+        </span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a class="hover:text-brand-600 font-medium" href="#">Ana səhifə</a>
+        <a class="hover:text-brand-600" href="#">Çatdırılma və ödəniş</a>
+        <a class="hover:text-brand-600" href="#">Nisyə alış</a>
+      </nav>
+      <button class="md:hidden inline-flex items-center justify-center text-2xl" id="openMenu">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </div>
+  </header>
+
+  
+  <div id="mobileMenu" class="hidden md:hidden border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 grid gap-3 text-sm">
+      <a class="hover:text-brand-600 font-medium" href="./index.html">Ana səhifə</a>
+      <a class="hover:text-brand-600" href="./index.html">Çatdırılma və ödəniş</a>
+      <a class="hover:text-brand-600" href="./index.html">Nisyə alış</a>
+    </div>
+  </div>
+
+  
+  <main class="max-w-[1400px] mx-auto px-4 md:px-6">
+    <section class="grid md:grid-cols-2 gap-0 md:gap-10 items-stretch min-h-[78svh]">
+      
+      <div class="relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-gray-900 text-white mt-8 md:mt-12">
+        
+        <div class="absolute inset-0 bg-[radial-gradient(60rem_40rem_at_-20%_-10%,#ffffff22,transparent_60%),radial-gradient(40rem_30rem_at_120%_120%,#e11d2e22,transparent_60%)]"></div>
+
+        <div class="relative h-full p-6 sm:p-10 lg:p-14 flex flex-col justify-end">
+          
+          <div class="absolute left-10 top-16 hidden sm:flex items-center justify-center">
+            <div class="relative">
+              <div class="h-36 w-36 rounded-full bg-yellow-400/90 blur-sm absolute inset-0"></div>
+              <div class="relative h-36 w-36 rounded-full bg-yellow-300 grid place-items-center ring-8 ring-yellow-200/60">
+                <span class="text-center text-gray-800 font-black leading-5 tracking-wide text-xs px-4">
+                  30 GÜNƏ QƏDƏR <br/> ARXAYIN AL! <br/> DƏYİŞ, QAYTAR
+                </span>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <h1 class="max-w-xl text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
+            Arxayın al! Məhsulun dəyişdirmə
+            və geri qaytarma müddəti <span class="text-brand-100">30 günə</span> uzandı.
+          </h1>
+
+          <div class="mt-8">
+            <a href="#" class="inline-flex items-center gap-2 bg-white text-gray-900 font-medium px-5 py-2.5 rounded-full hover:bg-gray-100 transition">
+              Ətraflı bax
+              <i class="ri-arrow-right-line text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="w-full flex items-center justify-center py-14 md:py-0">
+        <div class="w-full max-w-xl">
+          <div class="rounded-3xl bg-white shadow-soft p-6 sm:p-10 border">
+            <h2 class="text-3xl font-extrabold text-center mb-8">Daxil ol</h2>
+
+            <form id="loginForm" class="grid gap-5">
+              
+              <label class="block">
+                <span class="sr-only">E-poçt</span>
+                <div class="relative">
+                  <i class="ri-mail-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    placeholder="E-poçt"
+                    class="w-full rounded-xl border px-12 py-3 outline-none focus:ring-2 focus:ring-gray-900/10"
+                  />
+                </div>
+              </label>
+
+              
+              <label class="block">
+                <span class="sr-only">Şifrə</span>
+                <div class="relative">
+                  <i class="ri-lock-2-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                  <input
+                    id="password"
+                    type="password"
+                    required
+                    minlength="4"
+                    placeholder="Şifrə"
+                    class="w-full rounded-xl border px-12 py-3 outline-none focus:ring-2 focus:ring-gray-900/10"
+                  />
+                  <button type="button" id="togglePass"
+                          class="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-gray-500 hover:text-gray-700"
+                          aria-label="Şifrəni göstər">
+                    <i class="ri-eye-off-line text-lg"></i>
+                  </button>
+                </div>
+              </label>
+
+              <div class="flex items-center justify-between text-sm">
+                <label class="inline-flex items-center gap-2">
+                  <input id="remember" type="checkbox" class="rounded border-gray-300" />
+                  Məni yadda saxla
+                </label>
+                <a href="#" class="text-gray-600 hover:text-gray-900 underline-offset-4 hover:underline">Şifrəni unutmusən?</a>
+              </div>
+
+              <button id="submitBtn" type="submit"
+                      class="inline-flex items-center justify-center gap-2 rounded-xl bg-gray-900 text-white font-semibold py-3 hover:bg-black transition disabled:opacity-60 disabled:cursor-not-allowed">
+                <span> Daxil ol </span>
+                <svg id="spinner" class="hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
+              </button>
+
+              
+              <p id="errorBox" class="hidden text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg p-3"></p>
+
+              <p class="text-center text-sm text-gray-700">
+                Hesabınız yoxdur? <a href="#" class="font-semibold underline underline-offset-4">Qeydiyyatdan keçin</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <script src="./src/login.js"></script>
+</body>
+</html>

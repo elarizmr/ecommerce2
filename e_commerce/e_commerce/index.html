@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ecommerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+  <div class="first-row flex justify-between items-center py-4 gray px-8 mt-5 rounded-full">
+      <ul class="flex gap-10 font-bold font-color">
+        <li><a class="hover:text-white duration-300" href="./login.html">kampaniyalar</a></li>
+        <li><a class="hover:text-white duration-300" href="./login.html">korporativ satislar</a></li>
+        <li><a class="hover:text-white duration-300" href="./login.html">magazalar</a></li>
+        <li><a class="hover:text-white duration-300" href="./login.html">ayliq odenis</a></li>
+        <li><a class="hover:text-white duration-300" href="./login.html">Aktiv muqavileler</a></li>
+        <li><a class="hover:text-white duration-300" href="./login.html">diger</a></li>
+      </ul>
+      <div class="text-white">
+        <i class="ri-sun-fill text-xl cursor-pointer hover:text-black duration-300"></i>
+      </div>
+    </div>
+
+  <!-- Navbar -->
+  <header class="w-full bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+
+      <!-- Sol hissə -->
+      <div class="flex items-center space-x-3">
+        <!-- Logo -->
+        <img src="" class="w-10 h-10 rounded-full" alt="Logo">
+
+        <!-- Kataloq -->
+        <button class="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-full font-medium">
+          <i class="ri-apps-2-line text-lg"></i>
+          <span>Kataloq</span>
+        </button>
+
+        <!-- Search -->
+        <div class="relative w-80">
+          <input type="text" placeholder="Məhsul axtar..." 
+            class="w-full bg-gray-100 px-4 py-2 rounded-full focus:outline-none">
+          <i class="ri-search-line absolute right-3 top-2.5 text-gray-500"></i>
+        </div>
+      </div>
+
+      
+
+        
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    
+  <div class="relative max-w-6xl mx-auto mt-10">
+    <div id="slider" class="flex overflow-hidden rounded-2xl">
+
+      
+      <div class="min-w-full flex-shrink-0">
+        <img src="https://new.bakuelectronics.az/_next/image?url=https%3A%2F%2Fimg.b-e.az%2Fmedia%2Fpage%2Fslider%2F923520midea.jpg&w=3840&q=100"
+             class="w-full h-[400px] object-cover" alt="">
+      </div>
+
+      
+      <div class="min-w-full flex-shrink-0">
+        <img src="" 
+             class="w-full h-[400px] object-cover" alt="">
+      </div>
+
+    </div>
+
+    
+    <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-100">
+      <i class="ri-arrow-left-s-line text-2xl"></i>
+    </button>
+
+    
+    <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-100">
+      <i class="ri-arrow-right-s-line text-2xl"></i>
+    </button>
+  </div>
+
+
+
+  <body class="bg-white flex justify-center items-center min-h-screen">
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    
+    
+    <div class="bg-gray-50 rounded-2xl shadow-sm p-6 flex flex-col items-start hover:shadow-lg transition">
+      <div class="bg-gray-200 p-3 rounded-xl mb-4">
+        
+      </div>
+      <h3 class="text-lg font-bold text-gray-900">Arxayın al!</h3>
+      <p class="text-gray-600 text-sm mt-1">30 gün müddətində istər dəyiş, istər geri qaytar.</p>
+    </div>
+
+    
+    <div class="bg-gray-50 rounded-2xl shadow-sm p-6 flex flex-col items-start hover:shadow-lg transition">
+      <div class="bg-gray-200 p-3 rounded-xl mb-4">
+        
+      </div>
+      <h3 class="text-lg font-bold text-gray-900">Sürətli çatdırılma</h3>
+      <p class="text-gray-600 text-sm mt-1">24 saat ərzində çatdırılma</p>
+    </div>
+
+    
+    <div class="bg-gray-50 rounded-2xl shadow-sm p-6 flex flex-col items-start hover:shadow-lg transition">
+      <div class="bg-gray-200 p-3 rounded-xl mb-4">
+        
+      </div>
+      <h3 class="text-lg font-bold text-gray-900">Qapıda ödəmə</h3>
+      <p class="text-gray-600 text-sm mt-1">Qapıda ödəmə rahatlığı ilə sifariş imkanı</p>
+    </div>
+
+    
+    <div class="bg-gray-50 rounded-2xl shadow-sm p-6 flex flex-col items-start hover:shadow-lg transition">
+      <div class="bg-gray-200 p-3 rounded-xl mb-4">
+        
+      </div>
+      <h3 class="text-lg font-bold text-gray-900">Hissə-hissə ödəniş</h3>
+      <p class="text-gray-600 text-sm mt-1">Endirimli qiymətə indi al, 3 aya böl, hissə-hissə ödə!</p>
+    </div>
+
+  </div>
+
+  <style>
+    .focus-ring{outline:2px solid transparent;outline-offset:2px}
+    .focus-ring:focus-visible{box-shadow:0 0 0 4px rgb(59 130 246 / .4)}
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900 antialiased">
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+    <div class="text-rose-600 font-semibold text-sm mb-2">Ən çox satılanlar</div>
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8">
+      Bu məhsullar hər kəsin sevimlisidir!
+    </h1>
+
+    
+    <section id="grid" class="grid sm:grid-cols-2 xl:grid-cols-4 gap-6"></section>
+  </main>
+
+  
+  <div id="toast" class="fixed bottom-4 right-4 translate-y-6 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-neutral-900 text-white rounded-xl shadow-xl px-4 py-3 text-sm flex items-center gap-3">
+      <svg xmlns="" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-emerald-400"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-2.81a.75.75 0 1 0-1.22-.9l-3.724 5.05-1.776-1.78a.75.75 0 1 0-1.06 1.06l2.4 2.4a.75.75 0 0 0 1.143-.09l4.297-5.74Z" clip-rule="evenodd"/></svg>
+      <span id="toast-text">Səbətə əlavə edildi</span>
+    </div>
+  </div>
+
+  
+
+  </main>
+
+
+
+
+
+  <script src=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

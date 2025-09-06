@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Səbət</title>
+  <scrip src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 antialiased">
+  
+  <div class="first-row flex justify-between items-center py-4 px-8 mt-5 rounded-full bg-gray-50">
+    <ul class="flex gap-10 font-bold">
+      <li><a class="hover:text-black/60" href="./login.html">kampaniyalar</a></li>
+      <li><a class="hover:text-black/60" href="./login.html">korporativ satislar</a></li>
+      <li><a class="hover:text-black/60" href="./login.html">magazalar</a></li>
+      <li><a class="hover:text-black/60" href="./login.html">ayliq odenis</a></li>
+      <li><a class="hover:text-black/60" href="./login.html">Aktiv muqavileler</a></li>
+      <li><a class="hover:text-black/60" href="./login.html">diger</a></li>
+    </ul>
+    <button id="darkToggle" class="text-gray-700"><i class="ri-sun-line text-xl"></i></button>
+  </div>
+
+  
+  <header class="w-full bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      
+      <div class="flex items-center gap-3">
+        <a href="./index.html"><img src="https://via.placeholder.com/40x40" class="w-10 h-10 rounded-full" alt="Logo"></a>
+        <button class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full font-medium">
+          <i class="ri-apps-2-line text-lg"></i><span>Kataloq</span>
+        </button>
+        <div class="relative w-80 max-sm:hidden">
+          <input type="text" placeholder="Məhsul axtar..." class="w-full bg-gray-100 px-4 py-2 rounded-full focus:outline-none">
+          <i class="ri-search-line absolute right-3 top-2.5 text-gray-500"></i>
+        </div>
+      </div>
+
+      
+      <div class="flex items-center gap-2">
+        <a class="p-3 bg-gray-100 rounded-lg hover:bg-gray-200" href="./index.html#grid" title="Məhsullara qayıt">
+          <i class="ri-store-2-line text-xl"></i>
+        </a>
+        <button class="p-3 bg-gray-200 rounded-lg" title="Səbət"><i class="ri-shopping-cart-fill text-xl"></i></button>
+        <button class="p-3 bg-gray-100 rounded-lg hover:bg-gray-200"><i class="ri-heart-line text-xl"></i></button>
+        <button class="p-3 bg-gray-100 rounded-lg hover:bg-gray-200"><i class="ri-user-line text-xl"></i></button>
+      </div>
+    </div>
+  </header>
+
+  
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">Səbət</h1>
+
+    
+    <div id="emptyBox" class="hidden rounded-2xl bg-white border shadow p-10 text-center">
+      <i class="ri-shopping-bag-3-line text-5xl text-gray-400"></i>
+      <h2 class="text-xl font-bold mt-3">Səbət boşdur</h2>
+      <p class="text-gray-600 mt-1">Məhsul seçib səbətə əlavə edin.</p>
+      <a href="./index.html#grid" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-xl bg-neutral-900 text-white hover:bg-black">
+        <i class="ri-arrow-left-line"></i> Alış-verişə qayıt
+      </a>
+    </div>
+
+  
+    <div id="cartWrap" class="grid lg:grid-cols-3 gap-6">
+      
+      <section class="lg:col-span-2 rounded-2xl bg-white border shadow divide-y" id="cartItems">
+        
+      </section>
+
+      
+      <aside class="rounded-2xl bg-white border shadow p-6 h-fit">
+        <h3 class="text-lg font-semibold mb-4">Sifariş xülasəsi</h3>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between"><span>Məhsullar</span><span id="subtotal">0 ₼</span></div>
+          <div class="flex justify-between"><span>Çatdırılma</span><span>0 ₼</span></div>
+          <div class="flex justify-between"><span>Endirim</span><span id="discount">0 ₼</span></div>
+        </div>
+        <div class="my-4 border-t"></div>
+        <div class="flex justify-between text-lg font-bold">
+          <span>Ümumi</span><span id="grandTotal">0 ₼</span>
+        </div>
+        <button id="checkoutBtn" class="w-full mt-6 px-5 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+          Sifarişi təsdiqlə
+        </button>
+        <a href="./index.html#grid" class="mt-3 w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gray-100 hover:bg-gray-200">
+          <i class="ri-arrow-left-line"></i> Alış-verişə davam et
+        </a>
+      </aside>
+    </div>
+  </main>
+
+  <script src="./cart.js"></script>
+</body>
+</html>
