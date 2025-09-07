@@ -4,93 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Səbət</title>
-  <scrip src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900 antialiased">
-  
-  <div class="first-row flex justify-between items-center py-4 px-8 mt-5 rounded-full bg-gray-50">
-    <ul class="flex gap-10 font-bold">
-      <li><a class="hover:text-black/60" href="./login.html">kampaniyalar</a></li>
-      <li><a class="hover:text-black/60" href="./login.html">korporativ satislar</a></li>
-      <li><a class="hover:text-black/60" href="./login.html">magazalar</a></li>
-      <li><a class="hover:text-black/60" href="./login.html">ayliq odenis</a></li>
-      <li><a class="hover:text-black/60" href="./login.html">Aktiv muqavileler</a></li>
-      <li><a class="hover:text-black/60" href="./login.html">diger</a></li>
-    </ul>
-    <button id="darkToggle" class="text-gray-700"><i class="ri-sun-line text-xl"></i></button>
-  </div>
+<body class="bg-neutral-50 text-neutral-900">
 
   
-  <header class="w-full bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 h-16 flex items-center gap-4">
+      <a href="./index.html" class="w-10 h-10 rounded-full bg-red-600 text-white grid place-items-center text-xl font-bold">Q</a>
+
+      <nav class="ml-2 text-sm text-neutral-500">
+        <a class="hover:text-neutral-700" href="./index.html">Ana səhifə</a>
+        <span class="mx-2">›</span>
+        <span class="text-neutral-800 font-medium">Səbət</span>
+      </nav>
+
       
-      <div class="flex items-center gap-3">
-        <a href="./index.html"><img src="https://via.placeholder.com/40x40" class="w-10 h-10 rounded-full" alt="Logo"></a>
-        <button class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full font-medium">
-          <i class="ri-apps-2-line text-lg"></i><span>Kataloq</span>
+      <div class="ml-auto flex items-center gap-4 text-neutral-500">
+        <button id="topCompareBtn" class="w-11 h-11 rounded-xl border border-neutral-200 hover:bg-neutral-100 grid place-items-center">
+          <i class="ri-scales-3-line"></i>
         </button>
-        <div class="relative w-80 max-sm:hidden">
-          <input type="text" placeholder="Məhsul axtar..." class="w-full bg-gray-100 px-4 py-2 rounded-full focus:outline-none">
-          <i class="ri-search-line absolute right-3 top-2.5 text-gray-500"></i>
-        </div>
-      </div>
 
-      
-      <div class="flex items-center gap-2">
-        <a class="p-3 bg-gray-100 rounded-lg hover:bg-gray-200" href="./index.html#grid" title="Məhsullara qayıt">
-          <i class="ri-store-2-line text-xl"></i>
-        </a>
-        <button class="p-3 bg-gray-200 rounded-lg" title="Səbət"><i class="ri-shopping-cart-fill text-xl"></i></button>
-        <button class="p-3 bg-gray-100 rounded-lg hover:bg-gray-200"><i class="ri-heart-line text-xl"></i></button>
-        <button class="p-3 bg-gray-100 rounded-lg hover:bg-gray-200"><i class="ri-user-line text-xl"></i></button>
+        <button id="topCartBtn" class="w-11 h-11 rounded-xl border border-neutral-200 hover:bg-neutral-100 grid place-items-center">
+          <i class="ri-shopping-cart-line"></i>
+        </button>
+
+        <button id="topHeartBtn" class="w-11 h-11 rounded-xl border border-neutral-200 hover:bg-neutral-100 grid place-items-center">
+          <i class="ri-heart-line"></i>
+        </button>
+
+        <button id="topUserBtn" class="w-11 h-11 rounded-xl border border-neutral-200 hover:bg-neutral-100 grid place-items-center">
+          <a href="./login.html">
+            <i class="ri-user-line"></i>
+          </a>
+        </button>
       </div>
     </div>
   </header>
 
   
-  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
-    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6">Səbət</h1>
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <h1 class="text-3xl font-extrabold tracking-tight mb-6">Səbətim</h1>
 
-    
-    <div id="emptyBox" class="hidden rounded-2xl bg-white border shadow p-10 text-center">
-      <i class="ri-shopping-bag-3-line text-5xl text-gray-400"></i>
-      <h2 class="text-xl font-bold mt-3">Səbət boşdur</h2>
-      <p class="text-gray-600 mt-1">Məhsul seçib səbətə əlavə edin.</p>
-      <a href="./index.html#grid" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-xl bg-neutral-900 text-white hover:bg-black">
-        <i class="ri-arrow-left-line"></i> Alış-verişə qayıt
-      </a>
-    </div>
-
-  
-    <div id="cartWrap" class="grid lg:grid-cols-3 gap-6">
+    <div class="grid lg:grid-cols-[1fr_380px] gap-6">
       
-      <section class="lg:col-span-2 rounded-2xl bg-white border shadow divide-y" id="cartItems">
-        
+      <section class="bg-white rounded-2xl border border-neutral-200 shadow-sm">
+        <div id="cartItem" class="flex flex-col sm:flex-row items-center gap-4 p-5">
+          <img class="w-28 h-28 rounded-xl object-cover ring-1 ring-neutral-200"
+            src="https://new.bakuelectronics.az/_next/image?url=https%3A%2F%2Fimg.b-e.az%2Fmedia%2FinventImages%2FinventImages%2FinventImages%2Fiphone-13-mini-128gb-starlight-white-baku-electr_rIy2mFM.webp&w=750&q=75"
+            alt="Apple"/>
+
+          <div class="flex-1">
+            <p class="text-lg font-semibold">Apple iPhone 13 Mini 128GB Starlight White</p>
+            <div class="mt-2 flex items-center gap-3">
+              <span id="oldPriceLabel" class="text-neutral-400 line-through text-sm">899.99 ₼</span>
+              <span id="priceLabel" class="text-2xl font-extrabold">829.99 ₼</span>
+            </div>
+          </div>
+
+          
+          <div class="flex items-center gap-3">
+            <div class="flex items-center rounded-xl border border-neutral-200 overflow-hidden">
+              <button id="decBtn" class="px-4 py-2 hover:bg-neutral-100" aria-label="Azalt">−</button>
+              <div id="qty" class="w-10 text-center font-semibold">1</div>
+              <button id="incBtn" class="px-4 py-2 hover:bg-neutral-100" aria-label="Artır">+</button>
+            </div>
+
+            
+            <button id="removeItemBtn" class="w-11 h-11 rounded-xl border border-neutral-200 hover:bg-neutral-100 grid place-items-center" aria-label="Səbətdən sil">
+              <i class="ri-delete-bin-6-line text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="emptyState" class="hidden p-10 text-center text-neutral-500">
+          Səbətiniz boşdur.
+        </div>
+
+        <div class="border-t border-neutral-200 p-5">
+          <button id="checkoutBtn" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-neutral-900 text-white font-semibold">
+            Sifarişi rəsmiləşdir
+          </button>
+        </div>
       </section>
 
       
-      <aside class="rounded-2xl bg-white border shadow p-6 h-fit">
-        <h3 class="text-lg font-semibold mb-4">Sifariş xülasəsi</h3>
-        <div class="space-y-2 text-sm">
-          <div class="flex justify-between"><span>Məhsullar</span><span id="subtotal">0 ₼</span></div>
-          <div class="flex justify-between"><span>Çatdırılma</span><span>0 ₼</span></div>
-          <div class="flex justify-between"><span>Endirim</span><span id="discount">0 ₼</span></div>
+      <aside class="bg-white rounded-2xl border border-neutral-200 shadow-sm p-5 sticky top-24 h-fit">
+        <h2 class="text-xl font-bold mb-4">Ümumi baxış</h2>
+        <div class="flex items-start gap-3">
+          <div class="flex-1">
+            <p class="font-medium">Apple iPhone 13 Mini 128GB Starlight White</p>
+            <p id="summaryQty" class="text-sm text-neutral-500 mt-1">1 ədəd</p>
+          </div>
+          <div class="text-right">
+            <div id="summaryOld" class="text-neutral-400 line-through text-sm">899.99 ₼</div>
+            <div id="summaryPrice" class="text-base font-semibold">829.99 ₼</div>
+          </div>
         </div>
-        <div class="my-4 border-t"></div>
-        <div class="flex justify-between text-lg font-bold">
-          <span>Ümumi</span><span id="grandTotal">0 ₼</span>
+
+        <div class="mt-4">
+          <label class="block text-sm text-neutral-500 mb-2">Ümumi endirim</label>
+          <div id="summaryDiscount" class="w-full rounded-xl bg-neutral-100 text-neutral-600 px-4 py-3">− 70 ₼</div>
         </div>
-        <button id="checkoutBtn" class="w-full mt-6 px-5 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
-          Sifarişi təsdiqlə
-        </button>
-        <a href="./index.html#grid" class="mt-3 w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gray-100 hover:bg-gray-200">
-          <i class="ri-arrow-left-line"></i> Alış-verişə davam et
-        </a>
+
+        <div class="mt-6 pt-4 border-t border-neutral-200 flex justify-between">
+          <span class="text-neutral-600 font-medium">Cəmi məbləğ:</span>
+          <span id="summaryTotal" class="text-3xl font-extrabold">829.99 ₼</span>
+        </div>
       </aside>
     </div>
   </main>
 
-  <script src="./cart.js"></script>
+  
+  <div id="toast" class="pointer-events-none fixed inset-x-0 top-4 mx-auto w-fit bg-neutral-900 text-white text-sm px-4 py-2 rounded-full shadow-lg opacity-0 transition-opacity"></div>
+
+  
+  <script src="./src/cart.js"></script>
 </body>
 </html>
